@@ -1,0 +1,22 @@
+{
+  "service": {
+    "listen_host": "0.0.0.0",
+    "listen_port": 8999,
+    "log_level": "INFO",
+    "log_to_file": true,
+    "log_file": "pangolin_restart_service.log"
+  },
+  "pangolin": {
+    "directory": "./pangolin",
+    "docker_compose_file": "docker-compose.yml",
+    "config_file": "config/config.yml"
+  },
+  "port_range": {
+    "min": 50000,
+    "max": 60000
+  },
+  "docker": {
+    "use_sudo": true,
+    "timeout": 120
+  }
+}

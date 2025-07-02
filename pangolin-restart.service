@@ -1,0 +1,16 @@
+[Unit]
+Description=Pangolin Restart Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/path/to/pangolin-guard
+ExecStart=/usr/bin/python3 /path/to/pangolin-guard/pangolin_restart_service.py /path/to/pangolin-guard/service_config.json
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
